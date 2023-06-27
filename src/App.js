@@ -5,7 +5,6 @@ import "./App.css";
 
 function App() {
   var [checked, setChecked] = useReducer(checked => !checked, false);
-  // const [checked, setChecked] = useState(false);
   const [strike, strikeThrough] = useReducer(
     strike => !strike,
     "text-decoration: line-through;"
@@ -35,15 +34,6 @@ function App() {
     // }
   };
 
-  // const taskDeleter = e => {
-  //   for(let i = 0; i < list.length; i++){
-  //     if(list[i].id == e.id){
-  //       var newList = list.filter((todo) => todo.id != list[i].id);
-  //       setList(newList);
-  //       console.log(newList);
-  //     }
-  //   }
-  // }
 
   const deleteAll = (e) => {
     setList([]);
@@ -65,37 +55,15 @@ function App() {
       } else {
         console.log(list[i].name + " & " + e.name + " are NOT bros");
       }
-      // console.log(list[i]);
     }
     console.log("We shall end it with " + e);
-    //  if (e){
-    //    console.log()
-    //  }
   };
 
   const checkboxHandler = e => {
     console.log("NOW THE NEXT VERSION");
-    // console.log(taskItem.id);
-    // console.log(taskItem.name);
-    // console.log(taskItem.description);
     console.log(list);
-    // console.log(e);
     checkboxChangeHandler(e);
-    //taskDeleter(e);
   };
-
-  // const doneChecker = id => {
-  //   list.filter(todo => todo.id == id)
-  //     ? {
-  //         textDecoration: "line-through",
-  //         color: "gray",
-  //         fontStyle: "italic"
-  //       }
-  //     : {
-  //         textDecoration: "none",
-  //         color: "black"
-  //       };
-  // };
 
   //The App Part
   return (
@@ -151,8 +119,6 @@ function App() {
                 <label
                   className="Task"
                   id={taskItem.id}
-                  // onChange={strikeThrough}
-                  // style={doneChecker(taskItem.id)}
                   style={
                     !checked
                       ? {
@@ -170,92 +136,10 @@ function App() {
                   {taskItem.name}
                 </label>
                 <br />
-                {/* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class = "Delete" onChange={() => taskDeleter(taskItem)}>&nbsp;&times;&nbsp;</button><br/> */}
                 <label id="Abouttask">&nbsp;&nbsp;{taskItem.description}</label>
               </tr>
             ))}
-            {/* <tr>
-              <input
-                type="checkbox"
-                value={checked}
-                onChange={setChecked}
-              ></input>
-              <label
-                className="Task"
-                onChange={strikeThrough}
-                style={
-                  checked
-                    ? {
-                        textDecoration: "line-through",
-                        color: "gray",
-                        fontStyle: "italic"
-                      }
-                    : null
-                }
-              >
-                Text
-                <br />
-              </label>
-              <label id="Abouttask">&nbsp;&nbsp;&nbsp;&nbsp; About it</label>
-            </tr> */}
-            {/* <tr>
-              <input
-                type="checkbox"
-                value={checked}
-                onChange={setChecked}
-              ></input>
-              <label
-                className="Task"
-                onChange={strikeThrough}
-                style={
-                  checked
-                    ? {
-                        textDecoration: "line-through",
-                        color: "gray",
-                        fontStyle: "italic"
-                      }
-                    : null
-                }
-              >
-                Some Text
-                <br />
-              </label>
-              <label id="Abouttask">&nbsp;&nbsp;&nbsp;&nbsp; About it</label>
-            </tr> */}
-            {/* <tr>
-              <input type="checkbox"></input>
-              <label
-                className="Task"
-                onChange={strikeThrough}
-                style={
-                  checked.done
-                    ? {
-                        textDecoration: "line-through",
-                        color: "gray",
-                        fontStyle: "italic"
-                      }
-                    : null
-                }
-              >
-                Blah
-                <br />
-              </label>
-              <label id="Abouttask">&nbsp;&nbsp;&nbsp;&nbsp; Please Wait</label>
-            </tr> */}
           </table>
-
-          {/* <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <center>
-            <h1>We've got nothing here</h1>
-            <h3>To display a list, please add tasks</h3>
-          </center> */}
         </div>
       </div>
       <embed src= {aud} autostart="true" loop="true" height="0" width="0"></embed>
@@ -265,29 +149,3 @@ function App() {
 
 export default App;
 
-{
-  /* {list.map((todo) => 
-                  <tr key = {todo.id}>
-                    <input
-                type="checkbox"
-                value={checked}
-                onChange={setChecked}
-              ></input>
-              <label
-                className="Task"
-                onChange={strikeThrough}
-                style={
-                  checked
-                    ? {
-                        textDecoration: "line-through",
-                        color: "gray",
-                        fontStyle: "italic"
-                      }
-                    : null
-                }
-              >
-              {todo.task}<br />
-              </label>  
-              <label id="Abouttask">{todo.desc}</label>
-                )} */
-}

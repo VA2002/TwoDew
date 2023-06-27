@@ -2,9 +2,7 @@
 
 /*For body tag*/
 body {
-  /* background-image: linear-gradient(-60deg,rgb(40, 153, 134),rgb(40, 153, 134), rgb(65, 118, 204), rgb(65, 118, 204), rgb(65, 118, 204), rgb(99, 108, 238), rgb(99, 108, 238)); */
   background-image: linear-gradient(-60deg,rgb(90, 168, 168), rgb(91, 154, 214),rgb(91, 154, 214));
-  /* background-color: #9ccafd; */
   font-family: 'Bahnschrift SemiBold';
   background-size: 900% 900%;
   animation: gradient 12s ease infinite; /*Animation added to gradient*/
@@ -37,10 +35,6 @@ body {
   background-color: white;
   border-radius: 15px;
   box-shadow: 3px 3px 12px rgb(65, 65, 65);
-  /* overflow:scroll; */
-  /* border-width: 0.4px;
-  border-color: black;
-  border-style: solid; */
   margin-top: 6%;
   margin-left: 14%;
   position: fixed;
@@ -163,6 +157,8 @@ body {
   height: 20px;
   width: 32px;
 }
+
+/*Already in there*/
 
 .App {
   text-align: center;
